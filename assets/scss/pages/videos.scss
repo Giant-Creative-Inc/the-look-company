@@ -1,6 +1,15 @@
 @import '../variables';
 @import '../mixin';
-
+body[data-bg-header=true].archive .container-wrap.video-category-archive {
+  padding-top: 0px !important;
+  .video-gallery {
+    &__hero {
+      h1 {
+        color: $primary-color;
+      }
+    }
+  }
+}
 .video-gallery {
   &__hero {
     &.header-transparent {
@@ -32,6 +41,13 @@
           }
         }
       }
+    }
+    .vc_column-inner .vc_column-inner {
+        @include lg_desktop {
+          border-left: 2px solid $primary-color;
+          padding-left: 27px;
+        }
+
     }
     h1 {
       @include mobile {
@@ -154,17 +170,18 @@
             font-weight: 700;
           }
         }
+        .nectar-video-box {
+          margin-bottom: 0;
+        }
         .svl__grid {
           .svl__card {
             position: relative;
-            .svl__play {
-              opacity: 0;
+            .nectar_video_lightbox{
+              box-shadow: none;
             }
-            .svl__watch {
-              visibility: hidden;
-              position: absolute;
-              bottom:0;
-              left:0;
+            .nectar_video_lightbox:before,
+            .play {
+              opacity: 0;
             }
             h3.svl__name {
               font-weight: 700;
