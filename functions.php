@@ -34,6 +34,9 @@ function salient_child_enqueue_styles() {
   if ( is_page('videos') || taxonomy_exists( 'video-category' ) ) {
     wp_enqueue_style( 'tlc-videos-style', get_stylesheet_directory_uri() . '/assets/css/videos.min.css', '', $nectar_theme_version );
   }
+  if ( is_page('guides')) {
+    wp_enqueue_style( 'tlc-guides-style', get_stylesheet_directory_uri() . '/assets/css/guides.min.css', '', $nectar_theme_version );
+  }
   if ( is_page('our-work') ) {
     wp_enqueue_style( 'tlc-our-work-style', get_stylesheet_directory_uri() . '/assets/css/our-work.min.css', '', $nectar_theme_version );
   }
