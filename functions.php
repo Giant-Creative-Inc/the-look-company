@@ -43,8 +43,11 @@ function salient_child_enqueue_styles() {
   if ( is_page('brand-activations') ) {
     wp_enqueue_style( 'tlc-brand-activations-style', get_stylesheet_directory_uri() . '/assets/css/brand-activations.min.css', '', $nectar_theme_version );
   }
+  if ( is_page('the-look-group') ) {
+    wp_enqueue_style( 'tlc-the-look-group-style', get_stylesheet_directory_uri() . '/assets/css/the-look-group.min.css', '', $nectar_theme_version );
+  }
   if ( is_page('thank-you') ) {
-    wp_enqueue_style( 'tlc-homepage-style', get_stylesheet_directory_uri() . '/assets/css/thank-you.min.css', '', $nectar_theme_version );
+    wp_enqueue_style( 'tlc-thank-you-style', get_stylesheet_directory_uri() . '/assets/css/thank-you.min.css', '', $nectar_theme_version );
   }
   if ( is_home() || is_single() ) {
     wp_enqueue_style( 'tlc-blog-style', get_stylesheet_directory_uri() . '/assets/css/blog.min.css', '', $nectar_theme_version );
