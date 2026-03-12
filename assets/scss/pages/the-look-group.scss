@@ -205,4 +205,16 @@
       }
     }
   }
+
+  &__contact-us {
+    > .row-bg-wrap {
+      .inner-wrap {
+        .row-bg {
+          .row-bg-img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
 }

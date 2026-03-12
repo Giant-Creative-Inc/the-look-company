@@ -39,6 +39,9 @@ const cssTheLookGroup = build("./assets/scss/pages/the-look-group.scss", "the-lo
 const cssCareers = build("./assets/scss/pages/careers.scss", "careers.min.css");
 const cssLightboxes = build("./assets/scss/pages/lightboxes.scss", "lightboxes.min.css");
 const cssFabricAndFrames = build("./assets/scss/pages/fabric-and-frames.scss", "fabric-and-frames.min.css");
+const cssDisplaySystems = build("./assets/scss/pages/display-systems.scss", "display-systems.min.css");
+const cssSignsAndBanners = build("./assets/scss/pages/signs-and-banners.scss", "signs-and-banners.min.css");
+const cssServices = build("./assets/scss/pages/services.scss", "services.min.css");
 
 // group task
 const styles = parallel(
@@ -60,7 +63,10 @@ const styles = parallel(
   cssTheLookGroup,
   cssCareers,
   cssLightboxes,
-  cssFabricAndFrames
+  cssFabricAndFrames,
+  cssDisplaySystems,
+  cssSignsAndBanners,
+  cssServices
 );
 
 // watcher

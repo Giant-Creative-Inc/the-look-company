@@ -291,10 +291,33 @@
       }
     }
   }
+  &__contact-us,
   &__case-studies {
+    > .row-bg-wrap {
+      .inner-wrap {
+        .row-bg {
+          .row-bg-img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
     .vc_col-sm-12 {
       .flickity-page-dots {
         bottom: -50px !important;
+      }
+    }
+  }
+  &__case-studies {
+    @include desktop {
+      > .row-bg-wrap {
+        .inner-wrap {
+          .row-bg {
+            .row-bg-img {
+              max-width: 50%;
+            }
+          }
+        }
       }
     }
   }

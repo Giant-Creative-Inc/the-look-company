@@ -1,48 +1,7 @@
 @import '../variables';
 @import '../mixin';
 
-[class*="lightboxes__"] {
-  .row_col_wrap_12 {
-    @include touch_screen {
-      .pin-right {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        max-width: var(--mobile-container-width);
-      }
-    }
-    @include desktop {
-      .pin-right {
-        padding-left: 90px !important;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        max-width: calc(1920px / 2);
-      }
-    }
-    .iwithtext {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      .iwt-icon {
-        position: relative;
-        inset: auto;
-        margin: 0;
-        height: 24px;
-        img {
-          height: 24px;
-          margin: 0;
-        }
-      }
-      .iwt-text {
-        padding-left: 0;
-        line-height: normal;
-      }
-      @include desktop {
-        .iwt-text {
-          font-size: 20px;
-        }
-      }
-    }
-  }
+[class*="services__"] {
   .underlined-title {
     h2 {
       position: relative;
@@ -54,16 +13,7 @@
         bottom: 0;
         width: 100px;
         height: 1px;
-        background-color: $primary-color !important;
-      }
-    }
-  }
-  .center {
-    .underlined-title h2 {
-      &:after {
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+        background-color: $brand-navy !important;
       }
     }
   }
@@ -78,8 +28,17 @@
       }
     }
   }
+  .center {
+    .underlined-title h2 {
+      &:after {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+  }
 }
-.lightboxes {
+.services {
   &__hero {
     &.header-transparent {
       display: flex;
@@ -120,11 +79,10 @@
       }
       @include sm_desktop {
         padding-top: 8px;
-        line-height: 53px;
+        line-height: 1.25 !important;
       }
       @include lg_desktop {
         padding-top: 10px;
-        line-height: 65px;
       }
     }
     .hero-text {
@@ -141,7 +99,7 @@
       }
     }
   }
-  &__lightboxes {
+  &__brand-story {
     > .row-bg-wrap {
       .inner-wrap {
         &:before {
@@ -150,7 +108,7 @@
           right: 0%;
           left: 0%;
           top: 0;
-          background-color: $primary-color !important;
+          background-color: $brand-navy !important;
           width: 100vw;
           height: 7px;
           z-index: 2;
@@ -163,8 +121,10 @@
       }
     }
   }
-  &__led-light-system,
-  &__light-up-space {
+  &__concept-development,
+  &__design-and-planning,
+  &__project-management,
+  &__post-completion {
     > .row-bg-wrap {
       .inner-wrap {
         &:before {
@@ -173,13 +133,31 @@
           left: 0%;
           bottom: 0;
           max-width: 1312px;
-          background-color: $primary-color !important;
+          background-color: $brand-navy !important;
           width: 100vw;
           height: 7px;
           z-index: 2;
           @include desktop {
             height: 15px;
             width: 68vw;
+          }
+        }
+      }
+    }
+    &:nth-child(odd) {
+      > .row-bg-wrap {
+        .inner-wrap {
+          &:before {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+      @include desktop {
+        .dark-bg {
+          &:before {
+            right: auto;
+            left: 0;
           }
         }
       }
@@ -214,38 +192,19 @@
           border-radius: 50px;
         }
       }
-    }
-  }
-  &__our-frames {
-    @include desktop {
-      .column-image-bg-wrap {
-        border-radius: 24px 0 0 24px;
-      }
-    }
-  }
-  &__led-light-system {
-    > .row-bg-wrap {
-      .inner-wrap {
-        &:before {
-          right: 0;
-          left: auto;
+      .row_col_wrap_12_inner {
+        .flex_layout_desktop_row {
+          > .vc_column-inner {
+            > .wpb_wrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 12px 32px;
+              justify-content: start;
+              align-items: start;
+              justify-items: start;
+            }
+          }
         }
-      }
-    }
-    @include desktop {
-      .dark-bg {
-        &:before {
-          right: auto;
-          left: 0;
-        }
-      }
-    }
-  }
-  &__our-frames {
-    .row_col_wrap_12 {
-      @include desktop {
-        align-items: center;
-        justify-content: flex-end;
       }
     }
   }
@@ -276,6 +235,35 @@
             }
           }
         }
+      }
+    }
+  }
+  &__testimonial {
+    .vc_column-inner{
+      .column-bg-layer {
+        .inner-wrap {
+          .column-image-bg {
+            background-size: contain !important;
+            background-position: left center !important;
+            background-repeat: no-repeat !important;
+          }
+        }
+      }
+    }
+    h2 {
+      font-family: clarendon-text-pro, serif;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      letter-spacing: 0.8px;
+      font-size: 24px !important;
+      span {
+        color: $brand-navy;
+      }
+      @include sm_desktop {
+        font-size: 32px !important;
+      }
+      @include lg_desktop {
+        font-size: 40px !important;
       }
     }
   }
