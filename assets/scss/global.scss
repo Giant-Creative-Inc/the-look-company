@@ -240,3 +240,92 @@ ul:last-child {
     display: none;
   }
 }
+
+/* 404 SALITENT OVERRIDE */
+
+body #error-404 h1 {
+  font-family: $font-display;
+  line-height: 0.85 !important;
+  margin-bottom: 24px !important;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px;
+    height: 1px;
+    background-color: $primary-color !important;
+  }
+  @include mobile {
+    font-size: 150px !important;
+    padding-bottom: 12px !important;
+  }
+  @include sm_mobile {
+    font-size: 125px !important;
+  }
+}
+body #error-404 h2 {
+  font-family: $font-display;
+  line-height: 1 !important;
+  @include sm_mobile {
+    font-size: 28px !important;
+  }
+}
+body.error404 .main-content > .row > .col.span_12 {
+  margin-bottom: 0 !important;
+}
+
+
+/* padding for main rows */
+#error-404 {
+  padding: 64px 0;
+  @include tablet {
+    padding: 86px 0;
+  }
+  @include desktop {
+    padding: 96px 0;
+  }
+  @include xl_desktop {
+    padding: 120px 0;
+  }
+}
+
+body #error-404 .nectar-button {
+  margin-top: 24px !important;
+  margin-bottom: 0 !important;
+}
+
+/* END 404 OVERRIDE */
+
+/* STYLES FOR LEGAL PAGES */
+.info_page {
+  h1,h2 {
+    font-family: $font-display;
+    letter-spacing: normal !important;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 32px !important;
+    margin-bottom: 24px !important;
+    @include tablet {
+      font-size: 42px !important;
+    }
+    @include desktop {
+      font-size: 54px !important;
+    }
+  }
+  h2 {
+    font-size: 24px !important;
+    @include tablet {
+      font-size: 32px !important;
+    }
+    @include desktop {
+      font-size: 38px !important;
+    }
+    strong {
+      font-weight: 300 !important;
+    }
+  }
+}
