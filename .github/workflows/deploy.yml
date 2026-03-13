@@ -1,4 +1,4 @@
-name: Deploy to cPanel (FTP)
+name: Deploy to cPanel (FTPS)
 
 on:
   push:
@@ -14,14 +14,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
+      - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASSWORD }}
 
-          protocol: ftp
+          protocol: ftps
           port: 21
 
           # local repo path
@@ -29,3 +29,17 @@ jobs:
 
           # remote path to your theme on the server
           server-dir: /www/wp-content/themes/tlc-theme/
+
+          # Exclude dev files — nothing below belongs on the production server
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .claude/**
+            node_modules/**
+            assets/scss/**
+            assets/js/src/**
+            gulpfile.js
+            package.json
+            package-lock.json
+            baseline.md
