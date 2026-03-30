@@ -1,3 +1,11 @@
+/*
+ * Used on:
+ * - Category archive pages (WP: is_category())
+ * - Tag archive pages (WP: is_tag())
+ *
+ * Enqueued via: includes/enqueue.php -> tlc-blog-category-style (assets/css/blog-category.min.css)
+ */
+
 #sidebar {
   #block-4.widget {
     margin-bottom: 10px !important;
