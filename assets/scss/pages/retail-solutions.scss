@@ -281,3 +281,21 @@
     }
   }
 }
+
+@media screen and (min-width:999px){
+.retail-solutions__contact-us picture img {
+	object-fit: cover !important;
+	padding-left:50%;
+
+}
+	
+	.retail-solutions__who-we-are picture img {
+		object-fit: cover !important;
+	padding-left:50%;
+	}
+}
+
+	.retail-solutions__who-we-are picture img, .retail-solutions__case-studies picture img {
+				opacity:0.7
+
+}

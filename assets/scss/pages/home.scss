@@ -369,3 +369,14 @@
     }
   }
 }
+
+.home-page__retail, .home-page__sports{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.home-page__products .row_col_wrap_12 {
+	gap:10px;
+	flex-wrap: nowrap !important
+}
